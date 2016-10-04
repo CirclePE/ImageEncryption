@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lwh8762.imageencryption.MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical"
+            android:gravity="center|center"
+            android:translationZ="4dp">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+            
+                <Button
+                    android:id="@+id/selectBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="5"
+                    android:layout_margin="4dp"
+                    android:background="#FFFFFFFF"
+                    android:text="Select"/>
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="5"
+                    android:layout_margin="4dp"
+                    android:background="#FFFFFFFF"
+                    android:text="Save"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+
+                <Button
+                    android:id="@+id/encBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:background="#FFFFFFFF"
+                    android:text="Encryption"/>
+
+
+                <Button
+                    android:id="@+id/decBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:background="#FFFFFFFF"
+                    android:text="Decryption"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFFFF"
+        android:translationZ="8dp"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/keyInput"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:paddingLeft="4dp"
+            android:gravity="left|center"
+            android:inputType="numberSigned"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF"
+            android:hint="Input Key"/>
+
+        <Button
+            android:id="@+id/applyBtn"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Apply"
+            android:background="#FFDDDDFF"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
